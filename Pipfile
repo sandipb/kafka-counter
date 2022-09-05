@@ -12,6 +12,7 @@ python-snappy = "*"
 [dev-packages]
 pylint = "*"
 build = "*"
+twine = "*"
 
 [requires]
 python_version = "3.9"
