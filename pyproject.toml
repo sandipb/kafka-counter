@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kafka-counter"
+version = "0.0.1"
+authors = [
+  { name="Sandip Bhattacharya", email="pypi@r.sandipb.net" },
+]
+description = "Kafka message counter"
+readme = "README.md"
+license = { file="LICENSE" }
+requires-python = ">=3.7"
+classifiers = [
+    'Development Status :: 3 - Alpha',
+    'License :: OSI Approved :: Apache Software License',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+    "Topic :: Utilities",
+]
+keywords=["kafka"]
+dependencies = [
+    'pyaml',
+    'jsonpath-ng',
+    'kafka-python',
+    'python-snappy',
+]
+[project.scripts]
+kafka-count= "kafka_count:main"
+
+[project.urls]
+"Homepage" = 'https://github.com/sandipb/kafka-counter'
+"Bug Tracker" = 'https://github.com/sandipb/kafka-counter/issues'
