@@ -2,9 +2,8 @@ name: Docker
 
 on:
   push:
-    branches:
-      - 'main'
-
+    tags:
+      - '*'
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: ${{ github.repository_owner }}/kafka-counter
@@ -34,6 +33,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           tags: |
             type=raw,value=latest
+            type=semver,pattern={{version}}
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
