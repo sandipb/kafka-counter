@@ -59,3 +59,33 @@ Total events received: 93293
 	k8sevents                     : 1176 (1.3%)
 	modsec                        : 2 (0.0%)
 ```
+
+## Installation
+
+### Pip
+
+Needs snappy library development files installed if kafka messages are compressed with snappy.
+
+```console
+$ pip3 install kafka-counter
+...
+$ kafka-count -h
+```
+
+### pipx
+
+I prefer using pipx on my Mac (`brew install pipx`).
+
+```console
+$ pipx install kafka-counter
+  installed package kafka-counter 0.0.2, installed using Python 3.10.5
+  These apps are now globally available
+    - kafka-count
+done! ✨ 🌟 ✨
+```
+
+### Docker
+
+```console
+$ docker run --rm -it -v `pwd`/config.yaml:/config.yaml sandipb/kafka-counter:0.0.2 -c /config.yaml
+```
