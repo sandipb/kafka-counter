@@ -87,5 +87,5 @@ done! ✨ 🌟 ✨
 ### Docker
 
 ```console
-$ docker run --rm -it -v `pwd`/config.yaml:/config.yaml sandipb/kafka-counter:0.0.2 -c /config.yaml
+$ docker run --rm -it -v `pwd`/config.yaml:/app/config.yaml ghcr.io/sandipb/kafka-counter -c /app/config.yaml
 ```
